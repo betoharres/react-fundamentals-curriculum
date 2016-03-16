@@ -9,7 +9,7 @@ var Main = React.createClass({
     return (
       <div id="main-container" style={styles.backgroundPattern}>
         <NavBar>
-          <Home />
+          {this.props.children}
         </NavBar>
       </div>
     )
