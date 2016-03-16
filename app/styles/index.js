@@ -1,9 +1,16 @@
 var styles = {
   backgroundPattern: {
-    backgroundImage: 'url(../images/pattern.svg)'
+    backgroundImage: 'url(./app/images/pattern.svg)'
   },
   space: {
     marginTop: '25px'
+  },
+  navbarStyles: {
+    background: 'orange',
+    border: 'none',
+  },
+  brandColor: {
+    color: 'white'
   },
   colCentered: {
     float: 'none',

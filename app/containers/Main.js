@@ -7,9 +7,11 @@ var Main = React.createClass({
 
   render: function() {
     return (
-      <NavBar>
-        <Home />
-      </NavBar>
+      <div id="main-container" style={styles.backgroundPattern}>
+        <NavBar>
+          <Home />
+        </NavBar>
+      </div>
     )
   }
 });

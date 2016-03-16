@@ -1,12 +1,12 @@
 var React = require('react');
-var NavBar = React.createClass({
+var styles = require('../styles');
 
-  render: function() {
-    return (
+function NavBar(props) {
+  return (
       <div className="container-fluid">
-        <nav className="navbar navbar-default">
+        <nav className="navbar navbar-default" style={styles.navbarStyles}>
           <div className="navbar-header">
-            <a className="navbar-brand" href="#">
+            <a className="navbar-brand" style={styles.brandColor} href="#">
               ClimaTempo
             </a>
           </div>
@@ -19,10 +19,9 @@ var NavBar = React.createClass({
             <button type="submit" className="btn btn-success">Ver Tempo</button>
           </form>
         </nav>
-        {this.props.children}
+        {props.children}
       </div>
     )
-  }
-});
+}
 
 module.exports = NavBar;
