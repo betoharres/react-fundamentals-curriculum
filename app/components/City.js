@@ -3,7 +3,7 @@ var styles = require('../styles');
 
 function City(props) {
   return (
-    <div>Hello city!</div>
+      <h1>{props.name}</h1>
   )
 }
 
