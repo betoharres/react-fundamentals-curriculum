@@ -15,7 +15,6 @@ var styles = {
     border: 'none',
   },
   navFormStyle: {
-    backgroundColor: 'blue'
   },
   brandColor: {
     color: 'white'
@@ -26,7 +25,6 @@ var styles = {
   },
   transparentBg: {
     background: 'transparent',
-    color: 'blue'
   }
 };
 
