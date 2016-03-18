@@ -15,10 +15,14 @@ var CityContainer = React.createClass({
   },
   componentDidMount: function() {
     var city = this.props.routeParams.city;
-    this.setState({
-      city: city
-    });
-    weatherHelper.getCityInfo(city);
+    weatherHelper.getCityInfo(city)
+    .then(function(forecasts) {
+      this.setState({
+        city: city,
+        forecasts: forecasts
+      });
+      console.log(forecasts);
+    }.bind(this))
   },
 
   render: function() {

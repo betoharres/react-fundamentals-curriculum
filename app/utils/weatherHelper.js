@@ -1,6 +1,7 @@
 var axios = require('axios');
 var secretKey = 'd1d3fe0ea129f9c858ae7459472f4e15';
 var forecastDays = 5;
+var unitFormat= 'metric';
 
 function setCity(cityName) {
   return 'http://api.openweathermap.org/data/2.5/forecast/daily?q='+
@@ -9,14 +10,16 @@ function setCity(cityName) {
       secretKey
     +'&cnt=' +
     forecastDays
+    + '&units=' +
+    unitFormat
 }
 
 var helpers = {
   getCityInfo: function (city) {
     return axios
       .get(setCity(city))
-      .then(function(data){
-        console.log(data);
+      .then(function(response){
+        return response.data.list;
       })
       .catch(function(err){
         console.warn('Error in getUserInfo', err)
