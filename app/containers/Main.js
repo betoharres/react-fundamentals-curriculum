@@ -7,7 +7,7 @@ var Main = React.createClass({
 
   render: function() {
     return (
-      <div id="main-container" style={styles.backgroundPattern}>
+      <div id="main-container" >
         <NavBar>
           {this.props.children}
         </NavBar>

@@ -2,16 +2,18 @@ var styles = {
   backgroundPattern: {
     backgroundImage: 'url(./app/images/pattern.svg)',
     minHeight: '100%',
-    width: '100%',
-    position: 'absolute',
-    top: '0',
-    left: '0'
+    height: '100%',
+    minWidth: '100%',
+    marginLeft: '0',
+    marginRight: '0',
+    position: 'fixed',
   },
   space: {
     marginTop: '25px'
   },
   navbarStyles: {
     background: 'orange',
+    marginBottom: '0',
     border: 'none',
   },
   navFormStyle: {

@@ -3,7 +3,7 @@ var Link = require('react-router').Link;
 var styles = require('../styles');
 function Home (props) {
   return (
-    <div className="row">
+    <div className="row"style={styles.backgroundPattern}>
       <div className="col-sm-4 col-sm-offset-4">
         <h1 className="text-center">Tempo na sua cidade</h1>
         <hr />
