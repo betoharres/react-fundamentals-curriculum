@@ -10,7 +10,8 @@ var CityContainer = React.createClass({
 
   getInitialState: function() {
     return {
-      city: ''
+      city: '',
+      isLoading: true
     }
   },
   componentDidMount: function() {
@@ -19,7 +20,8 @@ var CityContainer = React.createClass({
     .then(function(forecasts) {
       this.setState({
         city: city,
-        forecasts: forecasts
+        forecasts: forecasts,
+        isLoading: false
       });
       console.log(forecasts);
     }.bind(this))
@@ -27,7 +29,11 @@ var CityContainer = React.createClass({
 
   render: function() {
     return (
-      <City name={this.state.city} />
+      <City
+        name={this.state.city}
+        forecasts={this.state.forecasts}
+        isLoading={this.state.isLoading}
+      />
     )
   }
 });
