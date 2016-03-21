@@ -22,7 +22,7 @@ var helpers = {
     return axios
       .get(setCity(city))
       .then(function(response){
-        console.log(setCity(city));
+        console.log(response.data);
         return response.data.list;
       })
       .catch(function(err){
