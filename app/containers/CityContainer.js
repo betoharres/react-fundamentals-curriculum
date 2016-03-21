@@ -11,6 +11,7 @@ var CityContainer = React.createClass({
   getInitialState: function() {
     return {
       city: '',
+      forecasts: [],
       isLoading: true
     }
   },
