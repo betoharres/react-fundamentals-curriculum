@@ -1,6 +1,7 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
 var Loading = require('./Loading');
+var Day = require('./Day');
 var styles = require('../styles');
 
 function City(props) {
