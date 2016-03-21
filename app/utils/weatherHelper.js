@@ -1,7 +1,7 @@
 var axios = require('axios');
 var secretKey = 'd1d3fe0ea129f9c858ae7459472f4e15';
 var forecastDays = 5;
-var unitFormat= 'imperial';
+var unitFormat= 'metric';
 var lang = 'pt';
 
 function setCity(cityName) {
