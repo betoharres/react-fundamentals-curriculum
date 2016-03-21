@@ -23,7 +23,6 @@ var CityContainer = React.createClass({
         forecasts: forecasts,
         isLoading: false
       });
-      console.log(forecasts);
     }.bind(this))
   },
 
