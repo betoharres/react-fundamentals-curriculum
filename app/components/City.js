@@ -10,7 +10,14 @@ function City(props) {
     )
   }else{
     return(
-      <div>Loaded</div>
+      <div>
+        <h1 className="lead text-center" style={styles.cityTitle}>{props.name}</h1>
+        {props.forecasts.map(
+          function(forecast){
+            return <Day key={forecast.dt} unixtime={forecast.dt} forecast={forecast.weather[0]} />
+          })
+        }
+      </div>
     )
   }
 }
