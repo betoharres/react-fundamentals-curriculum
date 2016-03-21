@@ -26,7 +26,7 @@ function City(props) {
 City.propTypes = {
   isLoading: PropTypes.bool.isRequired,
   name: PropTypes.string.isRequired,
-  forecasts: PropTypes.array.isRequired
+  forecasts: PropTypes.object.isRequired
 }
 
 module.exports = City;
