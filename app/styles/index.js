@@ -27,6 +27,9 @@ var styles = {
   },
   transparentBg: {
     background: 'transparent',
+  },
+  cityTitle: {
+    fontSize: '200%'
   }
 };
 
