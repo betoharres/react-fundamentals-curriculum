@@ -1,7 +1,19 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
+var styles = require('../styles');
 
 function unixTimestampToDate(time) {
+
+  var daysOfWeek = {
+    0: 'Dom',
+    1: 'Seg',
+    2: 'Ter',
+    3: 'Quar',
+    4: 'Qui',
+    5: 'Sex',
+    6: 'Sab',
+  };
+
   var monthsToPt = {
     0: 'Jan',
     1: 'Fev',
@@ -16,33 +28,34 @@ function unixTimestampToDate(time) {
     10: 'Nov',
     11: 'Dez'
   };
+
   var date = new Date(time * 1000)
-  var year = date.getFullYear();
-  var month = date.getMonth();
-  var day = date.getDate();
-  return day + ' de ' + monthsToPt[month];
+  return daysOfWeek[date.getDay()];
 }
 
 function WeatherIcon(props) {
   var url = './app/images/weather-icons/' + props.icon + '.svg';
   return (
-    <img src={url} alt="" />
+    <div>
+      <img style={styles.dayItem} src={url} />
+    </div>
   )
 }
 
 function Day(props) {
   return (
-    <div>
-      <div>{unixTimestampToDate(props.unixtime)}</div>
+    <div className="text-center">
+      <div className="lead" style={styles.dayWeekTitle}>{unixTimestampToDate(props.unixtime)}</div>
+      <h3>{props.forecast.description}</h3>
       <WeatherIcon icon={props.forecast.icon} />
+      <hr/>
     </div>
   );
 }
 
-// Day.propTypes = {
-//   key: PropTypes.integer.isRequired,
-//   unixtime: PropTypes.integer.isRequired,
-//   forecast: PropTypes.object.isRequired
-// }
+Day.propTypes = {
+  unixtime: PropTypes.number.isRequired,
+  forecast: PropTypes.object.isRequired
+}
 
 module.exports = Day;

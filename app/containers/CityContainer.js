@@ -27,11 +27,21 @@ var CityContainer = React.createClass({
     }.bind(this))
   },
 
+  handleCityDetails: function (data) {
+    this.context.router.push({
+      pathname: '/tempo/' + this.state.city + "/details",
+      state: {
+        weather: data
+      }
+    });
+  },
+
   render: function() {
     return (
       <City
         name={this.state.city}
         forecasts={this.state.forecasts}
+        onCityDetails={this.handleCityDetails}
         isLoading={this.state.isLoading}
       />
     )

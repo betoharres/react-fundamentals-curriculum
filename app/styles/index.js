@@ -29,7 +29,14 @@ var styles = {
     background: 'transparent',
   },
   cityTitle: {
+    fontSize: '250%'
+  },
+  dayWeekTitle: {
     fontSize: '200%'
+  },
+  dayItem: {
+    width: '65%',
+    height: '35%'
   }
 };
 

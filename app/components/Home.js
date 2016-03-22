@@ -1,4 +1,6 @@
 var React = require('react');
+var PropTypes = React.PropTypes;
+
 var Link = require('react-router').Link;
 var styles = require('../styles');
 function Home (props) {
@@ -27,6 +29,12 @@ function Home (props) {
       </div>
     </div>
   )
+}
+
+Home.propTypes = {
+  city: PropTypes.string.isRequired,
+  onUpdateCity: PropTypes.func.isRequired,
+  onSubmitCity: PropTypes.func.isRequired
 }
 
 module.exports = Home;
